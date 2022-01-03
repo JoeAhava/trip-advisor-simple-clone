@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"main": "server.js",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"client:start": "react-scripts start",
 		"server:start": "nodemon start",
@@ -26,5 +27,11 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"chai": "^4.3.4",
+		"chai-http": "^4.3.0",
+		"mocha": "^9.1.3",
+		"nodemon": "^2.0.15"
 	}
 }
