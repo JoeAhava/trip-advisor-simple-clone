@@ -1,3 +1,6 @@
 import { render } from "react-dom";
+import {} from "react-router-dom";
+import "./index.css";
+import App from "./App";
 
-render(<p>Hello Trip</p>, document.getElementById("root"));
+render(<App />, document.getElementById("root"));
