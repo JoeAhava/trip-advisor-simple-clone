@@ -1,0 +1,30 @@
+{
+	"name": "trip-advisor-simple-clone",
+	"version": "1.0.0",
+	"main": "server.js",
+	"license": "MIT",
+	"scripts": {
+		"client:start": "react-scripts start",
+		"server:start": "nodemon start",
+		"start": "node server"
+	},
+	"dependencies": {
+		"express": "^4.17.2",
+		"mongoose": "^6.1.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "^5.0.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
