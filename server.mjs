@@ -1,6 +1,6 @@
 import express from "express";
-import { connect } from "./config/db.js";
-import { handleError, passError } from "./middlewares/errorHandler.js";
+import { connect } from "./config/db.mjs";
+import { handleError, passError } from "./middlewares/errorHandler.mjs";
 const app = express();
 
 connect();
