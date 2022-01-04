@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 dotenv.config();
-export const URI = process.env.MONGO_URI;
+const URI = process.env.MONGO_URI;
 
 export const connect = (cb = null) =>
 	mongoose.connect(
