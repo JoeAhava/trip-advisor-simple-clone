@@ -1,6 +1,8 @@
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-export const URI = `mongodb+srv://root:c9kehhPrtGvpCVP7@trip-advisor-simple-clo.mlsef.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+dotenv.config();
+export const URI = process.env.MONGO_URI;
 
 export const connect = (cb = null) =>
 	mongoose.connect(
