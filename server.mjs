@@ -1,12 +1,14 @@
 import express from "express";
-import { connect } from "./config/db.mjs";
+import colors from "colors";
+import dotenv from "dotenv";
+import connectDB from "./config/db.mjs";
 import { handleError, passError } from "./middlewares/errorHandler.mjs";
 import usersRouter from "./routes/users.mjs";
 import authRouter from "./routes/auth.mjs";
 import { protect } from "./middlewares/auth.mjs";
 const app = express();
-
-connect();
+dotenv.config();
+connectDB();
 app.use(express.json());
 
 app.get(
@@ -24,6 +26,6 @@ app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use(handleError);
 
-app.listen(process.env.PORT || 9000, () =>
+export const server = app.listen(process.env.PORT || 9000, () =>
 	console.info(`Server started on ${process.env.PORT || 9000}`),
 );
